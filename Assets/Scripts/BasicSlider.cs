@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class BasicSlider : MonoBehaviour {
+	public GameController gc;
 
     private Slider slider;
     public GameObject grass;
@@ -23,6 +24,7 @@ public class BasicSlider : MonoBehaviour {
             slider.value = 0f;
             grass.transform.position = new Vector2(-13f, grass.transform.position.y);
             gameObject.SetActive(false);
+			gc.increaseMoney();
         }
 	}
 }

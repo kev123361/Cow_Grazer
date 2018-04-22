@@ -586,8 +586,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1050eee4dc244b34698f90d7cd427b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 835787070}
-  moneyCount: {fileID: 270042085}
+  gc: {fileID: 0}
+  moneyCount: {fileID: 0}
   upgradeCosts: 64000000c8000000f4010000ee020000e8030000
 --- !u!1 &554529861
 GameObject:
@@ -723,8 +723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373ed583b1872cd489f07b8041ab4c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 835787070}
-  sc: {fileID: 520204693}
+  gc: {fileID: 0}
+  sc: {fileID: 0}
 --- !u!1 &581190339
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,8 +859,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373ed583b1872cd489f07b8041ab4c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 835787070}
-  sc: {fileID: 520204693}
+  gc: {fileID: 0}
+  sc: {fileID: 0}
 --- !u!1 &769676615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1036,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d00faa8adc0bc48b4404f64f5658f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
+  totalMoney: {fileID: 0}
+  money: 1000
+  addMoney: 0
   frequency: 0
   speed: 0
   eatingRate: 0
@@ -1434,8 +1436,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373ed583b1872cd489f07b8041ab4c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 835787070}
-  sc: {fileID: 520204693}
+  gc: {fileID: 0}
+  sc: {fileID: 0}
 --- !u!1 &1290178988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,8 +1794,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373ed583b1872cd489f07b8041ab4c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 835787070}
-  sc: {fileID: 520204693}
+  gc: {fileID: 0}
+  sc: {fileID: 0}
 --- !u!1 &1693735314
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,5 +2085,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373ed583b1872cd489f07b8041ab4c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 835787070}
-  sc: {fileID: 520204693}
+  gc: {fileID: 0}
+  sc: {fileID: 0}

@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class testButton : MonoBehaviour {
+public class goToScene : MonoBehaviour {
 
-	public void goToGame() {
+	public void goToGame(string name) {
 		Debug.Log ("You have clicked the button");
-		SceneManager.LoadScene("BasicLevel");
+		SceneManager.LoadScene(name);
 	}
 
 	// Update is called once per frame

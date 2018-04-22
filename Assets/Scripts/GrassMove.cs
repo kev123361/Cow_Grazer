@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GrassMove : MonoBehaviour {
+	public GameController gc;
 
     public GameObject slider;
 	// Use this for initialization
@@ -15,7 +16,7 @@ public class GrassMove : MonoBehaviour {
 	void Update () {
 		if (transform.position.x < -2f)
         {
-            transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x + .6f, transform.position.y), Time.deltaTime);
+			transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x + gc.speed, transform.position.y), Time.deltaTime);
         } else
         {
             slider.SetActive(true);

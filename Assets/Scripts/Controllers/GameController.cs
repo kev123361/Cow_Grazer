@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
+	public Text totalMoney;
+
     public int money;
+	public int addMoney;
     public float frequency;
     public float speed;
 
@@ -16,11 +20,18 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		totalMoney.text = "Money: $" + money.ToString();
+		addMoney = 10;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		totalMoney.text = "Money: $" + money.ToString();
 	}
+
+	public void increaseMoney() {
+		money += addMoney;
+
+	}
+
 }
