@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
-	public float timer;
 	public Text totalMoney;
 
     public int money;
@@ -37,6 +36,10 @@ public class GameController : MonoBehaviour {
 	public void increaseMoney() {
 		money += addMoney;
 
+	}
+
+	public void increaseSkyMoney(int amount) {
+		money += amount;
 	}
 
     private void CheckUpgradeLevel()

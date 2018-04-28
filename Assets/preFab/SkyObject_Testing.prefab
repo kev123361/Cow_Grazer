@@ -21,10 +21,11 @@ GameObject:
   - component: {fileID: 4130872203847758}
   - component: {fileID: 212802292215670478}
   - component: {fileID: 114747229821858110}
+  - component: {fileID: 114979084447493970}
   - component: {fileID: 61137034935720234}
   - component: {fileID: 50600170472083726}
   m_Layer: 0
-  m_Name: ufo_Testing
+  m_Name: SkyObject_Testing
   m_TagString: skyObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1426152376498242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.32, y: 3.46, z: 0}
-  m_LocalScale: {x: 0.4968041, y: 0.4968041, z: 0.4968041}
+  m_LocalPosition: {x: -12.82, y: 3.46, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,7 +80,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.36, y: 3.7}
+    oldSize: {x: 8, y: 7.81}
     newSize: {x: 5.36, y: 3.7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -94,14 +95,27 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1426152376498242}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b398e59262ab444acb4a77b7cfd5f857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amount: 100
   MoveSpeed: 10
   frequency: 5
   magnitude: 0.5
+--- !u!114 &114979084447493970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426152376498242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf86a3655ad942edac13ff3075b2e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 10
 --- !u!212 &212802292215670478
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -136,7 +150,7 @@ SpriteRenderer:
   m_SortingLayerID: -2104186911
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: efc9bccc7d38c45c48f01d9cd6982b8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cbaa64caedd17da4d8e24b398dc4ae00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
