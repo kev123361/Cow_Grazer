@@ -19,7 +19,11 @@ public class DisplayCost : MonoBehaviour {
         upgradeLevel = gc.totalUpgradeLevel;
         switch (gameObject.name) {
             case ("EatingRateButton"):
-                if (gc.eatingRate <= upgradeLevel)
+                if (gc.eatingRate == 5)
+                {
+                    text.text = "Max";
+                }
+                else if (gc.eatingRate <= upgradeLevel)
                 {
                     text.text = "$" + sc.upgradeCosts[gc.eatingRate];
                 } else
@@ -28,7 +32,11 @@ public class DisplayCost : MonoBehaviour {
                 }
                 break;
             case ("HormonesButton"):
-                if (gc.hormones <= upgradeLevel)
+                if (gc.hormones == 5)
+                {
+                    text.text = "Max";
+                }
+                else if (gc.hormones <= upgradeLevel)
                 {
                     text.text = "$" + sc.upgradeCosts[gc.hormones];
                 }
@@ -38,7 +46,11 @@ public class DisplayCost : MonoBehaviour {
                 }
                 break;
             case ("EquipmentButton"):
-                if (gc.equipment <= upgradeLevel)
+                if (gc.equipment == 5)
+                {
+                    text.text = "Max";
+                }
+                else if (gc.equipment <= upgradeLevel)
                 {
                     text.text = "$" + sc.upgradeCosts[gc.equipment];
                 }
@@ -48,7 +60,11 @@ public class DisplayCost : MonoBehaviour {
                 }
                 break;
             case ("FieldButton"):
-                if (gc.field <= upgradeLevel)
+                if (gc.field == 5)
+                {
+                    text.text = "Max";
+                }
+                else if (gc.field <= upgradeLevel)
                 {
                     text.text = "$" + sc.upgradeCosts[gc.field];
                 } else
@@ -57,7 +73,11 @@ public class DisplayCost : MonoBehaviour {
                 }
                 break;
             case ("SpotsButton"):
-                if (gc.spots <= upgradeLevel)
+                if (gc.spots == 5)
+                {
+                    text.text = "Max";
+                }
+                else if (gc.spots <= upgradeLevel)
                 {
                     text.text = "$" + sc.upgradeCosts[gc.spots];
                 } else

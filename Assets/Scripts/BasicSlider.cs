@@ -14,6 +14,8 @@ public class BasicSlider : MonoBehaviour {
     public GameObject marveloustext;
     public GameObject goodtext;
     public GameObject bootext;
+    public GameObject greattext;
+    public GameObject perfecttext;
 
     private float t;
     private bool alternate;
@@ -96,6 +98,80 @@ public class BasicSlider : MonoBehaviour {
                 }
 
                 t += Time.deltaTime * .6f;
+                break;
+            case (3):
+                if (Input.GetKey(KeyCode.X))
+                {
+                    slider.value = Mathf.Lerp(slider.value, slider.value + .5f, Time.deltaTime);
+                }
+                if (slider.value == 1f)
+                {
+                    int rand = Random.Range(1, 5);
+                    switch (rand)
+                    {
+                        case (1):
+                            Instantiate(marveloustext, canvas.transform);
+                            break;
+                        case (2):
+                            Instantiate(goodtext, canvas.transform);
+                            break;
+                        case (3):
+                            Instantiate(perfecttext, canvas.transform);
+                            break;
+                        case (4):
+                            Instantiate(greattext, canvas.transform);
+                            break;
+                    }
+                    GrassEaten();
+                }
+                break;
+            case (4):
+                if (Input.GetKey(KeyCode.X))
+                {
+                    slider.value = Mathf.Lerp(slider.value, slider.value + 1.2f, Time.deltaTime);
+                }
+                if (slider.value == 1f)
+                {
+                    int rand = Random.Range(1, 5);
+                    switch (rand)
+                    {
+                        case (1):
+                            Instantiate(marveloustext, canvas.transform);
+                            break;
+                        case (2):
+                            Instantiate(goodtext, canvas.transform);
+                            break;
+                        case (3):
+                            Instantiate(perfecttext, canvas.transform);
+                            break;
+                        case (4):
+                            Instantiate(greattext, canvas.transform);
+                            break;
+                    }
+                    GrassEaten();
+                }
+                break;
+            case (5):
+                if (Input.GetKeyDown(KeyCode.X))
+                {
+                    int rand = Random.Range(1, 5);
+                    switch (rand)
+                    {
+                        case (1):
+                            Instantiate(marveloustext, canvas.transform);
+                            break;
+                        case (2):
+                            Instantiate(goodtext, canvas.transform);
+                            break;
+                        case (3):
+                            Instantiate(perfecttext, canvas.transform);
+                            break;
+                        case (4):
+                            Instantiate(greattext, canvas.transform);
+                            break;
+                    }
+                    GrassEaten();
+                }
                 break;
         }
 	}
