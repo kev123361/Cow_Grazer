@@ -45,8 +45,14 @@ TagManager:
   - name: Background
     uniqueID: 3247074999
     locked: 0
+  - name: Projectiles
+    uniqueID: 4182053941
+    locked: 0
   - name: Cow
     uniqueID: 186899341
+    locked: 0
+  - name: SkyEvents
+    uniqueID: 2190780385
     locked: 0
   - name: Grass
     uniqueID: 4082265609
