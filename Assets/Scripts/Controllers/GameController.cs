@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour {
     public int equipment;
     public int field;
     public int spots;
+    public int totalUpgradeLevel;
 
 	// Use this for initialization
 	void Start () {
@@ -27,11 +28,21 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		totalMoney.text = "Money: $" + money.ToString();
+
+        CheckUpgradeLevel();
 	}
 
 	public void increaseMoney() {
 		money += addMoney;
 
 	}
+
+    private void CheckUpgradeLevel()
+    {
+        if ((eatingRate + hormones + equipment + field + spots) / 5 > totalUpgradeLevel)
+        {
+            totalUpgradeLevel += 1;
+        }
+    }
 
 }
