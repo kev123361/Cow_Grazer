@@ -73,10 +73,9 @@ public class SkyEventController : MonoBehaviour {
 			return 3; //UFO
 		}
 	}
-
-<<<<<<< HEAD
+		
 	void spawnObject(int sprite) {
 		flyingObject.GetComponent<SpriteRenderer> ().sprite = skyObjects [sprite];
 		Instantiate (flyingObject, calculatePos(), flyingObject.transform.rotation);
-	}
+
 }
