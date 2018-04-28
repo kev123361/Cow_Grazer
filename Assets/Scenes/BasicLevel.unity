@@ -1359,14 +1359,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 1183227538}
-  fb: {fileID: 1114758655463150, guid: dabf49555a4594ced8733ab31b435909, type: 2}
+  fb: {fileID: 1399578621969570, guid: dabf49555a4594ced8733ab31b435909, type: 2}
   head: {fileID: 1877820385}
   timeToFire: 0.5
   lazerTimer: 0
   isCharging: 0
   lazer1: {fileID: 1213233055373676, guid: f07287ac4ba5e4923aebc80c00ca70a7, type: 2}
-  lazer2: {fileID: 1908789384179074, guid: 2b5bff94b3fff45eba39e4951ada9fb0, type: 2}
-  lazerMain: {fileID: 1107129372145308, guid: a2539503458b146199f3d4e8b8f94721, type: 2}
+  lazer2: {fileID: 1786580262016222, guid: 2b5bff94b3fff45eba39e4951ada9fb0, type: 2}
+  lazerMain: {fileID: 1139243787967844, guid: a2539503458b146199f3d4e8b8f94721, type: 2}
   instantiate: 0
 --- !u!212 &1877820384
 SpriteRenderer:

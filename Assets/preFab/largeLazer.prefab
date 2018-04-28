@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61866403508756900}
   m_Layer: 0
   m_Name: largeLazer
-  m_TagString: Untagged
+  m_TagString: projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
