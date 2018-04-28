@@ -220,7 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
@@ -524,7 +523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &988130279
 RectTransform:
   m_ObjectHideFlags: 0
@@ -543,6 +542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -277, y: -180}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &988130280
@@ -757,7 +757,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -825,7 +825,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -895,7 +895,6 @@ MonoBehaviour:
   frequency: 0
   speed: 10
   eatingRate: 0
-  eatingRate: 2
   hormones: 0
   equipment: 0
   field: 0
@@ -1023,8 +1022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -135}
-  m_AnchoredPosition: {x: -22, y: -189}
+  m_AnchoredPosition: {x: -9, y: -186}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404854762
@@ -1183,6 +1181,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
+  m_Text: 'Money:'
 --- !u!222 &1487902238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1204,6 +1203,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -342, y: 211}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1505864976
@@ -1376,24 +1376,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 1183227538}
-<<<<<<< HEAD
   fb: {fileID: 1399578621969570, guid: dabf49555a4594ced8733ab31b435909, type: 2}
-=======
-  fb: {fileID: 2108099619}
->>>>>>> 44a17fc11a63aec832a5d7e7d4c2c67ecd1cedf4
   head: {fileID: 1877820385}
   timeToFire: 0.5
   lazerTimer: 0
   isCharging: 0
-<<<<<<< HEAD
   lazer1: {fileID: 1213233055373676, guid: f07287ac4ba5e4923aebc80c00ca70a7, type: 2}
   lazer2: {fileID: 1786580262016222, guid: 2b5bff94b3fff45eba39e4951ada9fb0, type: 2}
   lazerMain: {fileID: 1139243787967844, guid: a2539503458b146199f3d4e8b8f94721, type: 2}
-=======
-  lazer1: {fileID: 1865868427}
-  lazer2: {fileID: 1461811744}
-  lazerMain: {fileID: 0}
->>>>>>> 44a17fc11a63aec832a5d7e7d4c2c67ecd1cedf4
   instantiate: 0
 --- !u!212 &1877820384
 SpriteRenderer:
@@ -1446,6 +1436,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1877820382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.67, y: -0.1, z: 0}
   m_LocalScale: {x: 0.35674322, y: 0.35674325, z: 0.35674325}
   m_Children: []
   m_Father: {fileID: 0}
