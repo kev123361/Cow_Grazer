@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -453,7 +453,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 725964870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.73, y: 16.37, z: 0}
+  m_LocalPosition: {x: -11, y: 20, z: 0}
   m_LocalScale: {x: 0.7482234, y: 3.1491854, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -596,7 +596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &988130279
 RectTransform:
   m_ObjectHideFlags: 0
@@ -615,7 +615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -175, y: -135.5}
+  m_AnchoredPosition: {x: -247.6, y: -175.8}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &988130280
@@ -631,6 +631,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gc: {fileID: 1183227538}
   grass: {fileID: 893548688}
+  eatValue: 0.1
+  canvas: {fileID: 559322920}
+  marveloustext: {fileID: 1892462492120296, guid: 64ba291a4bba8444e82d2bbc5621c8dd,
+    type: 2}
+  goodtext: {fileID: 1170270188786136, guid: dd4b088a4b751624282ac430ea9be393, type: 2}
+  bootext: {fileID: 1833175322430136, guid: d062170a58b42354fa1298eb585391f8, type: 2}
 --- !u!114 &988130281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,7 +716,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -778,7 +784,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -847,7 +853,7 @@ MonoBehaviour:
   addMoney: 0
   frequency: 0
   speed: 10
-  eatingRate: 0
+  eatingRate: 2
   hormones: 0
   equipment: 0
   field: 0
@@ -975,7 +981,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -135}
+  m_AnchoredPosition: {x: -22, y: -189}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404854762
@@ -1289,7 +1295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -252, y: 150}
+  m_AnchoredPosition: {x: -358, y: 212}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1505864976
@@ -1550,7 +1556,8 @@ MonoBehaviour:
   isCharging: 0
   lazer1: {fileID: 1865868427}
   lazer2: {fileID: 1461811744}
-  toDestroy: []
+  lazerMain: {fileID: 0}
+  instantiate: 0
 --- !u!212 &1877820384
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -8,23 +8,104 @@ public class BasicSlider : MonoBehaviour {
 
     private Slider slider;
     public GameObject grass;
+    public float eatValue = .1f;
+    public Canvas canvas;
+
+    public GameObject marveloustext;
+    public GameObject goodtext;
+    public GameObject bootext;
+
+    private float t;
+    private bool alternate;
+    private float hiddenEatProgress = 0f;
 	// Use this for initialization
 	void Start () {
         slider = this.GetComponent<Slider>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown(KeyCode.X))
-        {
-            slider.value += .1f;
-        }
-        if (slider.value == 1f)
-        {
-            slider.value = 0f;
-            grass.transform.position = new Vector2(-13f, grass.transform.position.y);
-            gameObject.SetActive(false);
-			gc.increaseMoney();
+
+    // Update is called once per frame
+    void Update() {
+        switch (gc.eatingRate) {
+            case (0):
+                if (Input.GetKeyDown(KeyCode.X))
+                {
+                    slider.value += eatValue;
+                }
+                if (slider.value == 1f)
+                {
+                    GrassEaten();
+                }
+                break;
+            case (1):
+                if (Input.GetKeyDown(KeyCode.X) && alternate)
+                {
+                    slider.value += eatValue;
+                    alternate = !alternate;
+                } else if (Input.GetKeyDown(KeyCode.Z) && !alternate)
+                {
+                    slider.value += eatValue;
+                    alternate = !alternate;
+                }
+                if (slider.value == 1f)
+                {
+                    GrassEaten();
+                }
+                break;
+            case (2):
+                if (Input.GetKeyDown(KeyCode.X))
+                {
+                    if (slider.value > .35f && slider.value < .65f)
+                    {
+                        hiddenEatProgress += .25f;
+                        Instantiate(marveloustext, canvas.transform);
+                    }
+                    else if (slider.value > .2f && slider.value < .8f)
+                    {
+                        hiddenEatProgress += .15f;
+                        Instantiate(goodtext, canvas.transform);
+                    }
+                    else
+                    {
+                        hiddenEatProgress += .5f;
+                        Instantiate(bootext, canvas.transform);
+                    }
+
+                }
+                if (alternate)
+                {
+                    slider.value = Mathf.Lerp(slider.value, 1f, t);
+                } else
+                {
+                    slider.value = Mathf.Lerp(slider.value, 0f, t);
+                }
+                if (slider.value == 1f)
+                {
+                    alternate = false;
+                    t = 0f;
+                }
+                if (slider.value <= .000001f)
+                {
+                    alternate = true;
+                    t = 0f;
+                }
+
+             
+                if (hiddenEatProgress >= 1f)
+                {
+                    GrassEaten();
+                }
+
+                t += Time.deltaTime * .6f;
+                break;
         }
 	}
+
+    public void GrassEaten()
+    {
+        slider.value = 0f;
+        hiddenEatProgress = 0f;
+        grass.transform.position = new Vector2(-13f, grass.transform.position.y);
+        gameObject.SetActive(false);
+        gc.increaseMoney();
+    }
 }
