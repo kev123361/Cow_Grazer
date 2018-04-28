@@ -214,6 +214,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 1183227538}
+  bird: {fileID: 0}
+  plane: {fileID: 0}
+  duckHunt: {fileID: 0}
+  ufo: {fileID: 0}
+  extra: {fileID: 0}
+  skyObjects: []
+  spriteNum: 0
+  spawnPosition: {x: 0, y: 0}
+  flyingObject: {fileID: 0}
 --- !u!4 &430723687
 Transform:
   m_ObjectHideFlags: 0
@@ -787,7 +796,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gc: {fileID: 1183227538}
   grass: {fileID: 893548688}
-  eatValue: 0.1
   canvas: {fileID: 559322920}
   marveloustext: {fileID: 1892462492120296, guid: 64ba291a4bba8444e82d2bbc5621c8dd,
     type: 2}
@@ -1012,7 +1020,7 @@ MonoBehaviour:
   money: 0
   addMoney: 0
   frequency: 0
-  speed: 10
+  speed: 0
   eatingRate: 0
   hormones: 5
   equipment: 0

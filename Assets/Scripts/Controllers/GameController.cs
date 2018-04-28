@@ -8,9 +8,9 @@ public class GameController : MonoBehaviour {
 	public Text totalMoney;
 
     public int money;
-	public int addMoney;
+	public int addMoney = 30;
     public float frequency;
-    public float speed;
+    public float speed = 1f;
 
     //Public variables for upgrade levels
     public int eatingRate;
@@ -24,13 +24,11 @@ public class GameController : MonoBehaviour {
 	void Start () {
         LoadPrefs();
 		totalMoney.text = "Money: $" + money.ToString();
-        addMoney = 30;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		totalMoney.text = "Money: $" + money.ToString();
-
         CheckUpgradeLevel();
 	}
 
@@ -56,8 +54,9 @@ public class GameController : MonoBehaviour {
         PlayerPrefs.SetInt("Field", 0);
         PlayerPrefs.SetInt("Spots", 0);
         PlayerPrefs.SetInt("Total Upgrade Level", 0);
-        PlayerPrefs.SetInt("Money", 0);
-        PlayerPrefs.SetInt("Add Money", 0);
+        PlayerPrefs.SetInt("Money", 50);
+        PlayerPrefs.SetInt("Add Money", 30);
+        PlayerPrefs.SetFloat("Speed", 1);
     }
 
     public void SavePrefs()
@@ -70,6 +69,7 @@ public class GameController : MonoBehaviour {
         PlayerPrefs.SetInt("Total Upgrade Level", totalUpgradeLevel);
         PlayerPrefs.SetInt("Money", money);
         PlayerPrefs.SetInt("Add Money", addMoney);
+        PlayerPrefs.SetFloat("Speed", speed);
     }
 
     public void LoadPrefs()
@@ -82,5 +82,6 @@ public class GameController : MonoBehaviour {
         totalUpgradeLevel = PlayerPrefs.GetInt("Total Upgrade Level");
         money = PlayerPrefs.GetInt("Money");
         addMoney = PlayerPrefs.GetInt("Add Money");
+        speed = PlayerPrefs.GetFloat("Speed");
     }
 }

@@ -81,6 +81,9 @@ public class ShopController : MonoBehaviour {
                     if (gc.hormones == 1)
                     {
                         gc.addMoney += 15;
+                    } else if (gc.hormones == 2)
+                    {
+                        gc.speed += .2f;
                     }
                     break;
                 case ("Equipment"):
@@ -88,9 +91,19 @@ public class ShopController : MonoBehaviour {
                     {
                         gc.addMoney += 10;
                     }
-                    if (gc.equipment == 2)
+                    else if (gc.equipment == 2)
                     {
                         gc.addMoney += 20;
+                    }
+                    else if (gc.equipment == 3)
+                    {
+                        gc.speed += .3f;
+                    } else if (gc.equipment == 4)
+                    {
+                        gc.speed += .5f;
+                    } else if (gc.equipment == 5)
+                    {
+                        gc.speed += .5f;
                     }
                     break;
                 case ("Field"):

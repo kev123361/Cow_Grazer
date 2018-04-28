@@ -16,7 +16,7 @@ public class GrassMove : MonoBehaviour {
 	void Update () {
 		if (transform.position.x < -2f)
         {
-			transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x + gc.speed, transform.position.y), Time.deltaTime);
+			transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x + gc.speed * 2, transform.position.y), Time.deltaTime);
         } else
         {
             slider.SetActive(true);

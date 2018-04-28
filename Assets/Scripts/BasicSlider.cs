@@ -8,7 +8,6 @@ public class BasicSlider : MonoBehaviour {
 
     private Slider slider;
     public GameObject grass;
-    public float eatValue = .1f;
     public Canvas canvas;
 
     public GameObject marveloustext;
@@ -41,11 +40,11 @@ public class BasicSlider : MonoBehaviour {
             case (1):
                 if (Input.GetKeyDown(KeyCode.X) && alternate)
                 {
-                    slider.value += eatValue;
+                    slider.value += .1f;
                     alternate = !alternate;
                 } else if (Input.GetKeyDown(KeyCode.Z) && !alternate)
                 {
-                    slider.value += eatValue;
+                    slider.value += .1f;
                     alternate = !alternate;
                 }
                 if (slider.value == 1f)
