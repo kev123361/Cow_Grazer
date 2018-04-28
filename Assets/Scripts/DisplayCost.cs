@@ -8,6 +8,7 @@ public class DisplayCost : MonoBehaviour {
     public ShopController sc;
 
     private Text text;
+    private int upgradeLevel;
 	// Use this for initialization
 	void Start () {
         text = GetComponentInChildren<Text>();
@@ -15,21 +16,54 @@ public class DisplayCost : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        upgradeLevel = gc.totalUpgradeLevel;
         switch (gameObject.name) {
             case ("EatingRateButton"):
-                text.text = "$" + sc.upgradeCosts[gc.eatingRate];
+                if (gc.eatingRate <= upgradeLevel)
+                {
+                    text.text = "$" + sc.upgradeCosts[gc.eatingRate];
+                } else
+                {
+                    text.text = "Locked";
+                }
                 break;
             case ("HormonesButton"):
-                text.text = "$" + sc.upgradeCosts[gc.hormones];
+                if (gc.hormones <= upgradeLevel)
+                {
+                    text.text = "$" + sc.upgradeCosts[gc.hormones];
+                }
+                else
+                {
+                    text.text = "Locked";
+                }
                 break;
             case ("EquipmentButton"):
-                text.text = "$" + sc.upgradeCosts[gc.equipment];
+                if (gc.equipment <= upgradeLevel)
+                {
+                    text.text = "$" + sc.upgradeCosts[gc.equipment];
+                }
+                else
+                {
+                    text.text = "Locked";
+                }
                 break;
             case ("FieldButton"):
-                text.text = "$" + sc.upgradeCosts[gc.field];
+                if (gc.field <= upgradeLevel)
+                {
+                    text.text = "$" + sc.upgradeCosts[gc.field];
+                } else
+                {
+                    text.text = "Locked";
+                }
                 break;
             case ("SpotsButton"):
-                text.text = "$" + sc.upgradeCosts[gc.spots];
+                if (gc.spots <= upgradeLevel)
+                {
+                    text.text = "$" + sc.upgradeCosts[gc.spots];
+                } else
+                {
+                    text.text = "Locked";
+                }
                 break;
         }
 	}
