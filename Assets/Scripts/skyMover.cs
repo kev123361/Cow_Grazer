@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class skyMover : MonoBehaviour {
 
+	public int amount;
+
 	public float MoveSpeed = 0;
 
 	public float frequency = 0;  // Speed of sine movement
