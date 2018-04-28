@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        LoadPrefs();
 		totalMoney.text = "Money: $" + money.ToString();
 		addMoney = 10;
 	}
@@ -45,4 +46,37 @@ public class GameController : MonoBehaviour {
         }
     }
 
+    public void NewGame()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetInt("Eating Rate", 0);
+        PlayerPrefs.SetInt("Hormones", 0);
+        PlayerPrefs.SetInt("Equipment", 0);
+        PlayerPrefs.SetInt("Field", 0);
+        PlayerPrefs.SetInt("Spots", 0);
+        PlayerPrefs.SetInt("Total Upgrade Level", 0);
+        PlayerPrefs.SetInt("Money", 0);
+    }
+
+    public void SavePrefs()
+    {
+        PlayerPrefs.SetInt("Eating Rate", eatingRate);
+        PlayerPrefs.SetInt("Hormones", hormones);
+        PlayerPrefs.SetInt("Equipment", equipment);
+        PlayerPrefs.SetInt("Field", field);
+        PlayerPrefs.SetInt("Spots", spots);
+        PlayerPrefs.SetInt("Total Upgrade Level", totalUpgradeLevel);
+        PlayerPrefs.SetInt("Money", money);
+    }
+
+    public void LoadPrefs()
+    {
+        eatingRate = PlayerPrefs.GetInt("Eating Rate");
+        hormones = PlayerPrefs.GetInt("Hormones");
+        equipment = PlayerPrefs.GetInt("Equipment");
+        field = PlayerPrefs.GetInt("Field");
+        spots = PlayerPrefs.GetInt("Spots");
+        totalUpgradeLevel = PlayerPrefs.GetInt("Total Upgrade Level");
+        money = PlayerPrefs.GetInt("Money");
+    }
 }
