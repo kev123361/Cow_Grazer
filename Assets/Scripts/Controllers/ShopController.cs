@@ -29,6 +29,7 @@ public class ShopController : MonoBehaviour {
                     {
                         gc.money -= upgradeCosts[gc.eatingRate];
                         gc.eatingRate += 1;
+                        ChangeAddMoney(upgrade);
                     }
                     break;
                 case ("Hormones"):
@@ -36,6 +37,7 @@ public class ShopController : MonoBehaviour {
                     {
                         gc.money -= upgradeCosts[gc.hormones];
                         gc.hormones += 1;
+                        ChangeAddMoney(upgrade);
                     }
                     break;
                 case ("Equipment"):
@@ -43,6 +45,7 @@ public class ShopController : MonoBehaviour {
                     {
                         gc.money -= upgradeCosts[gc.equipment];
                         gc.equipment += 1;
+                        ChangeAddMoney(upgrade);
                     }
                     break;
                 case ("Field"):
@@ -50,6 +53,7 @@ public class ShopController : MonoBehaviour {
                     {
                         gc.money -= upgradeCosts[gc.field];
                         gc.field += 1;
+                        ChangeAddMoney(upgrade);
                     }
                     break;
                 case ("Spots"):
@@ -57,8 +61,43 @@ public class ShopController : MonoBehaviour {
                     {
                         gc.money -= upgradeCosts[gc.spots];
                         gc.spots += 1;
+                        ChangeAddMoney(upgrade);
                     }
                     break;
+            }
+        }
+    }
+
+    private void ChangeAddMoney(string upgrade)
+    {
+        if (gc.totalUpgradeLevel < 5)
+        {
+            switch (upgrade)
+            {
+                case ("Eating Rate"):
+                    gc.addMoney += 5;
+                    break;
+                case ("Hormones"):
+                    if (gc.hormones == 1)
+                    {
+                        gc.addMoney += 15;
+                    }
+                    break;
+                case ("Equipment"):
+                    if (gc.equipment == 1)
+                    {
+                        gc.addMoney += 10;
+                    }
+                    if (gc.equipment == 2)
+                    {
+                        gc.addMoney += 20;
+                    }
+                    break;
+                case ("Field"):
+
+                    gc.addMoney += gc.field * 18;
+                    break;
+                
             }
         }
     }

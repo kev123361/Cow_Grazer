@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61137034935720234}
   - component: {fileID: 50600170472083726}
   m_Layer: 0
-  m_Name: ufo_Testing
+  m_Name: SkyObject_Testing
   m_TagString: skyObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -31,7 +31,7 @@ public class BasicSlider : MonoBehaviour {
             case (0):
                 if (Input.GetKeyDown(KeyCode.X))
                 {
-                    slider.value += eatValue;
+                    slider.value += .05f;
                 }
                 if (slider.value == 1f)
                 {

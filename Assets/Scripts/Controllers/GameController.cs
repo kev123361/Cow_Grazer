@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour {
 	void Start () {
         LoadPrefs();
 		totalMoney.text = "Money: $" + money.ToString();
-		addMoney = 10;
+        addMoney = 30;
 	}
 	
 	// Update is called once per frame
@@ -57,6 +57,7 @@ public class GameController : MonoBehaviour {
         PlayerPrefs.SetInt("Spots", 0);
         PlayerPrefs.SetInt("Total Upgrade Level", 0);
         PlayerPrefs.SetInt("Money", 0);
+        PlayerPrefs.SetInt("Add Money", 0);
     }
 
     public void SavePrefs()
@@ -68,6 +69,7 @@ public class GameController : MonoBehaviour {
         PlayerPrefs.SetInt("Spots", spots);
         PlayerPrefs.SetInt("Total Upgrade Level", totalUpgradeLevel);
         PlayerPrefs.SetInt("Money", money);
+        PlayerPrefs.SetInt("Add Money", addMoney);
     }
 
     public void LoadPrefs()
@@ -79,5 +81,6 @@ public class GameController : MonoBehaviour {
         spots = PlayerPrefs.GetInt("Spots");
         totalUpgradeLevel = PlayerPrefs.GetInt("Total Upgrade Level");
         money = PlayerPrefs.GetInt("Money");
+        addMoney = PlayerPrefs.GetInt("Add Money");
     }
 }

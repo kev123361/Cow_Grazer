@@ -30,7 +30,7 @@ public class SkyEventController : MonoBehaviour {
 	}
 
 	void spawnObject() {
-		flyingObject.GetComponent<Sprite> = skyObjects [spriteNum];
+		flyingObject.GetComponent<SpriteRenderer>().sprite = skyObjects [spriteNum];
 		Instantiate (flyingObject, spawnPosition, flyingObject.transform.rotation);
 	}
 }
