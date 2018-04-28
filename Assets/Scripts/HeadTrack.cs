@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class HeadTrack : MonoBehaviour {
 
-	public GameController gc; 
+	public GameController gc;
 
+	public float fireTimer;
+	public float fireTime;
 	public GameObject fb;
 	public Transform head;
 
@@ -15,6 +17,7 @@ public class HeadTrack : MonoBehaviour {
 
 
 	public GameObject lazer1;
+	public GameObject lazerChargetmp;
 	public GameObject lazer2;
 
 	public GameObject lazerMain;
@@ -23,12 +26,13 @@ public class HeadTrack : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		lazerMain = Instantiate (lazerMain, head.position, head.rotation);
+		lazerMain.GetComponent<destroyOnContact> ().gc = this.gc;
 		lazerMain.SetActive (false);
 	}
 
-	void TaskOnClick() {
-		Debug.Log ("should instantiate thing wow");
-		Instantiate (fb, head.position, head.rotation);
+	void fireFireBolt() {
+		GameObject tmp = Instantiate (fb, head.position, head.rotation);
+		tmp.GetComponent<destroyOnContact> ().gc = this.gc;
 	}
 
 	// Update is called once per frame
@@ -38,9 +42,10 @@ public class HeadTrack : MonoBehaviour {
 		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
 		if (gc.hormones == 3) {
-			if (Input.GetMouseButtonDown (1)) {
-				Debug.Log ("YOU JUST CLICKED THING");
-				TaskOnClick ();
+			fireTimer += Time.deltaTime;
+			if (Input.GetMouseButtonDown (1) && fireTimer > fireTime) {
+				fireTimer = 0;
+				fireFireBolt ();
 			}
 		} else if (gc.hormones == 4) {
 			if (Input.GetMouseButtonDown (1)) {
@@ -50,12 +55,15 @@ public class HeadTrack : MonoBehaviour {
 					charge ();
 				}
 			} else if (Input.GetMouseButton (1)) {
+				lazerChargetmp.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 				lazerTimer += Time.deltaTime;
 				if (isCharging && lazerTimer > timeToFire) {
 					fireLazer ();
+					lazerChargetmp.SetActive (false);
 				}
 
 			} else if (Input.GetMouseButtonUp (1)) {
+				lazerChargetmp.SetActive (true);
 				isCharging = false;
 				GameObject everything;
 				everything = GameObject.Find("smallLazer(Clone)");
@@ -80,14 +88,15 @@ public class HeadTrack : MonoBehaviour {
 	}
 
 	void charge() {
-		Instantiate (lazer1, head.position, head.rotation);
+		lazerChargetmp = Instantiate (lazer1, head.position, head.rotation);
 
 		lazerTimer = 0;
 		isCharging = true;
 	}
 
 	void fireLazer () {
-		Instantiate (lazer2, head.position, head.rotation);
+		GameObject tmp = Instantiate (lazer2, head.position, head.rotation);
+		tmp.GetComponent<destroyOnContact> ().gc = this.gc;
 		isCharging = false;
 	}
 

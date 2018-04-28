@@ -5,17 +5,15 @@ using UnityEngine;
 public class destroyOnContact : MonoBehaviour {
 
 	public GameController gc;
-
 	// Use this for initialization
 	void Start () {
-		
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log ("INTERACTING");
-		//if (other.tag == "projectile") {
-		//	gc.increaseMoney ();
-		//}
+		Debug.Log (other.gameObject);
+		if (other.tag == "skyObject") {
+			gc.increaseMoney ();
+		}
 		Destroy (other.gameObject);
 	}
 

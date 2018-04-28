@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - lazer1
+  - projectile
+  - skyObject
   layers:
   - Default
   - TransparentFX
@@ -45,11 +47,14 @@ TagManager:
   - name: Background
     uniqueID: 3247074999
     locked: 0
+  - name: Cow
+    uniqueID: 186899341
+    locked: 0
   - name: Projectiles
     uniqueID: 4182053941
     locked: 0
-  - name: Cow
-    uniqueID: 186899341
+  - name: head
+    uniqueID: 326031159
     locked: 0
   - name: SkyEvents
     uniqueID: 2190780385

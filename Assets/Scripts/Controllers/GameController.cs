@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
+	public float timer;
 	public Text totalMoney;
 
     public int money;
