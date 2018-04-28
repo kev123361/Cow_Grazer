@@ -6,7 +6,6 @@ public class fireBallMover : MonoBehaviour {
 
 
 	public float speed;
-	public Vector2 debug;
 
 	// Use this for initialization
 	void Start () {
