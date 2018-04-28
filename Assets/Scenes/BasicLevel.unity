@@ -1243,7 +1243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02688a67bf83a47e1b0f98cb39f1a629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fb: {fileID: 0}
+  fb: {fileID: 2108099619}
+  fbs: {fileID: 1877820385}
 --- !u!212 &1877820384
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1310,8 +1311,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2108099621}
   - component: {fileID: 2108099620}
-  - component: {fileID: 2108099623}
   - component: {fileID: 2108099622}
+  - component: {fileID: 2108099623}
   m_Layer: 0
   m_Name: fireBall
   m_TagString: Untagged
