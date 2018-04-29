@@ -3,11 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - lazer1
-  - projectile
-  - skyObject
-  - Music
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -44,28 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 3247074999
-    locked: 0
-  - name: Cow
-    uniqueID: 186899341
-    locked: 0
-  - name: FrontCow
-    uniqueID: 1059048691
-    locked: 0
-  - name: Projectiles
-    uniqueID: 4182053941
-    locked: 0
-  - name: head
-    uniqueID: 326031159
-    locked: 0
-  - name: SkyEvents
-    uniqueID: 2190780385
-    locked: 0
-  - name: Grass
-    uniqueID: 4082265609
-    locked: 0
-  - name: UI
-    uniqueID: 428756661
     locked: 0
