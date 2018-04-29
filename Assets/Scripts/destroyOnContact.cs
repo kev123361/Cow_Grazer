@@ -15,7 +15,13 @@ public class destroyOnContact : MonoBehaviour {
 		if (other.tag == "skyObject") {
 			gc.increaseSkyMoney (checkPrice(other.gameObject));
 		}
-		Destroy (other.gameObject);
+		other.gameObject.GetComponent<skyMover> ().enabled = false;
+		other.gameObject.GetComponent<destroyByTime> ().lifeTime = 1.0f;
+		other.gameObject.GetComponent<skyDead> ().enabled = true;
+		float angle = -90;
+		Quaternion r = Quaternion.AngleAxis(angle, Vector3.forward);
+		other.gameObject.GetComponent<Transform> ().rotation = r;
+		//Destroy (other.gameObject);
 	}
 
 	// Update is called once per frame
@@ -24,16 +30,16 @@ public class destroyOnContact : MonoBehaviour {
 	}
 
 	private int checkPrice(GameObject g) {
-		if (g.GetComponent<SpriteRenderer> ().sprite.name == "bird_Testing") {
+		if (g.name == "Bird1(Clone)") {
+			return 50;
+		} else if (g.name == "Bird2(Clone)") {
+			return 50;
+		} else if (g.name == "Plane(Clone)") {
 			return 100;
-		} else if (g.GetComponent<SpriteRenderer> ().sprite.name == "plane_Testing") {
-			return 150;
-		} else if (g.GetComponent<SpriteRenderer> ().sprite.name == "duckHunt_Testing") {
-			return 200;
-		} else if (g.GetComponent<SpriteRenderer> ().sprite.name == "ufo_Testing") {
-			return 250;
-		}else if(g.GetComponent<SpriteRenderer> ().sprite.name == "grass placeholder") {
-			return 1000;
+		} else if (g.name == "DuckHunt(Clone)") {
+			return 500;
+		}else if(g.name == "UFO(Clone)") {
+			return 500;
 		}
 		return 0;
 	}

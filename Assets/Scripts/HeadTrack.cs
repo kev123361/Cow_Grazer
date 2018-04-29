@@ -31,14 +31,18 @@ public class HeadTrack : MonoBehaviour {
 	}
 
 	void fireFireBolt() {
-		GameObject tmp = Instantiate (fb, head.position, head.rotation);
+		Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
+		Quaternion r = Quaternion.AngleAxis(angle, Vector3.forward);
+		GameObject tmp = Instantiate (fb, head.position, r);
 		tmp.GetComponent<destroyOnContact> ().gc = this.gc;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
-		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
+		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 180;
+		float projectileAngle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg - 90;
 		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
 		if (gc.hormones == 3) {
@@ -55,7 +59,7 @@ public class HeadTrack : MonoBehaviour {
 					charge ();
 				}
 			} else if (Input.GetMouseButton (1)) {
-				lazerChargetmp.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+				lazerChargetmp.transform.rotation = Quaternion.AngleAxis(projectileAngle, Vector3.forward);
 				lazerTimer += Time.deltaTime;
 				if (isCharging && lazerTimer > timeToFire) {
 					fireLazer ();
@@ -73,7 +77,7 @@ public class HeadTrack : MonoBehaviour {
 			if (Input.GetMouseButtonDown (1)) {
 				lazerMain.SetActive (true);
 			} else if (Input.GetMouseButton (1)) {
-				lazerMain.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+				lazerMain.transform.rotation = Quaternion.AngleAxis(projectileAngle, Vector3.forward);
 			}else if (Input.GetMouseButtonUp (1)) {
 				lazerMain.SetActive (false);
 			}
@@ -95,7 +99,10 @@ public class HeadTrack : MonoBehaviour {
 	}
 
 	void fireLazer () {
-		GameObject tmp = Instantiate (lazer2, head.position, head.rotation);
+		Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
+		Quaternion r = Quaternion.AngleAxis(angle, Vector3.forward);
+		GameObject tmp = Instantiate (lazer2, head.position, r);
 		tmp.GetComponent<destroyOnContact> ().gc = this.gc;
 		isCharging = false;
 	}

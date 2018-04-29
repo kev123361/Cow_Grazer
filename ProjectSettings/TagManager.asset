@@ -53,6 +53,9 @@ TagManager:
   - name: CowMiddle
     uniqueID: 4292378361
     locked: 0
+  - name: Projectiles
+    uniqueID: 4010118139
+    locked: 0
   - name: Grass
     uniqueID: 1148201061
     locked: 0
@@ -61,9 +64,6 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2539368639
-    locked: 0
-  - name: Projectiles
-    uniqueID: 4010118139
     locked: 0
   - name: UI
     uniqueID: 2213762445

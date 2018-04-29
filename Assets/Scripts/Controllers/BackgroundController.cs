@@ -54,8 +54,8 @@ public class BackgroundController : MonoBehaviour {
 	Vector2 calculatePos() {
 		forground = false;
 		float xPos = -15.0f;
-		float yPos = 0.3f;
-		scale = Random.Range (0.5f, 0.75f);
+		float yPos = -1.0f;
+		scale = Random.Range (0.5f, 0.65f);
 		if (Random.Range (0.0f, 1.0f) <= .5) {
 			scale = Random.Range (0.75f, 1.0f);
 			yPos = -2.5f;
@@ -79,6 +79,6 @@ public class BackgroundController : MonoBehaviour {
 			temp.GetComponent<SpriteRenderer> ().sortingLayerName = "Grass";
 			temp.GetComponent<SpriteRenderer> ().sortingOrder = 6;
 		}
-		//temp.GetComponent<Transform>
+		temp.GetComponent<Transform> ().localScale = temp.GetComponent<Transform> ().localScale * scale;
 	}
 }
