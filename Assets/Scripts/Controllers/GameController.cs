@@ -71,6 +71,11 @@ public class GameController : MonoBehaviour {
             frontlegs.GetComponent<Animator>().SetLayerWeight(1, 1);
             cow.transform.position = new Vector3(cow.transform.position.x, -2.5f, cow.transform.position.z);
         }
+        if (equipment == 3)
+        {
+            backlegs.GetComponent<Animator>().SetLayerWeight(2, 1);
+            frontlegs.GetComponent<Animator>().SetLayerWeight(2, 1);
+        }
     }
 
     public void NewGame()
