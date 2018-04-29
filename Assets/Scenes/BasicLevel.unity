@@ -339,7 +339,7 @@ MonoBehaviour:
   bird2: {fileID: 1012917051378924, guid: 2d8c0e030b0de4733864666454364991, type: 2}
   plane: {fileID: 1012917051378924, guid: 2d8c0e030b0de4733864666454364991, type: 2}
   duckHunt: {fileID: 1111779056263566, guid: ae71cf663e24d414189572eb4f75129e, type: 2}
-  ufo: {fileID: 1452566088346066, guid: 68f86d41e7e1d403cbd79dad234a4add, type: 2}
+  ufo: {fileID: 1478924303624700, guid: 2d2b49ae6f63a4fea8ef32f02d42b210, type: 2}
   tmp: {fileID: 0}
   debug: 0
 --- !u!4 &430723687
