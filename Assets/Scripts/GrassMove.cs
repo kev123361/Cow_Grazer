@@ -21,7 +21,8 @@ public class GrassMove : MonoBehaviour {
         CheckGrass();
 		if (transform.position.x < 3.5f)
         {
-			transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x + gc.speed * 2, transform.position.y), Time.deltaTime);
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Walking")) 
+                transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x + gc.speed * 2, transform.position.y), Time.deltaTime);
         } else
         {
             slider.SetActive(true);
@@ -34,7 +35,6 @@ public class GrassMove : MonoBehaviour {
         
         foreach (Transform child in transform)
         {
-            Debug.Log(gc.field);
             if (child.gameObject.name == grassTypes[gc.field])
             {
                 
