@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - projectile
+  - skyObject
+  - Music
   layers:
   - Default
   - TransparentFX
@@ -40,4 +43,28 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 702393569
+    locked: 0
+  - name: CowBack
+    uniqueID: 779505235
+    locked: 0
+  - name: CowMiddle
+    uniqueID: 4292378361
+    locked: 0
+  - name: Grass
+    uniqueID: 1148201061
+    locked: 0
+  - name: CowFront
+    uniqueID: 783872997
+    locked: 0
+  - name: Foreground
+    uniqueID: 2539368639
+    locked: 0
+  - name: Projectiles
+    uniqueID: 4010118139
+    locked: 0
+  - name: UI
+    uniqueID: 2213762445
     locked: 0
