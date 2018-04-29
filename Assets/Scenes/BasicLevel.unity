@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 3
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -525,6 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 1183227538}
+  cow: {fileID: 1505864976}
   slider: {fileID: 988130278}
 --- !u!1 &950895681
 GameObject:
@@ -612,12 +613,16 @@ MonoBehaviour:
   gc: {fileID: 1183227538}
   grass: {fileID: 893548688}
   canvas: {fileID: 559322920}
+  cow: {fileID: 1505864976}
+  addMoneyText: {fileID: 1905787552019128, guid: 1924076087aa80344bdfa3bce0958185,
+    type: 2}
   marveloustext: {fileID: 1892462492120296, guid: 64ba291a4bba8444e82d2bbc5621c8dd,
     type: 2}
   goodtext: {fileID: 1170270188786136, guid: dd4b088a4b751624282ac430ea9be393, type: 2}
   bootext: {fileID: 1833175322430136, guid: d062170a58b42354fa1298eb585391f8, type: 2}
-  greattext: {fileID: 0}
-  perfecttext: {fileID: 0}
+  greattext: {fileID: 1802370034808942, guid: 6bdc4997da6d96f41b9d42e6ebae010c, type: 2}
+  perfecttext: {fileID: 1448828208307586, guid: 17d96af66f2e2234398c67502382a29e,
+    type: 2}
 --- !u!114 &988130281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,6 +1188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1505864978}
   - component: {fileID: 1505864977}
+  - component: {fileID: 1505864979}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Untagged
@@ -1224,7 +1230,7 @@ SpriteRenderer:
   m_SortingLayerID: 186899341
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9b7ca2de570c7284dae2646285a6e5bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 947b944cc909d9e4e8b0eeef725a578a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1241,12 +1247,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1505864976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5244079, y: 0.050749183, z: -0.055319488}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.57, y: -1.42, z: -0.055319488}
+  m_LocalScale: {x: 0.5490525, y: 0.5490525, z: 0.5490525}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1505864979
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1505864976}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 768c8c3aeb457e540b94324634b43c6a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1849599468
 GameObject:
   m_ObjectHideFlags: 0
