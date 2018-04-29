@@ -11,14 +11,12 @@ public class SkyEventController : MonoBehaviour {
 	public GameController gc;
 
 	public GameObject bird;
+	public GameObject bird2;
 	public GameObject plane;
 	public GameObject duckHunt;
 	public GameObject ufo;
-	public GameObject bird2;
-	public GameObject tmp;
 
-	public Vector2 spawnPosition;
-	public GameObject flyingObject;
+	public GameObject tmp;
 
 	private float maxY = 4.0f;
 	private float minY = 1.0f;
@@ -75,6 +73,6 @@ public class SkyEventController : MonoBehaviour {
     void spawnObject()
     {
 		pickObject ();
-		GameObject temp = Instantiate(tmp, calculatePos(), flyingObject.transform.rotation);
+		GameObject temp = Instantiate(tmp, calculatePos(), tmp.transform.rotation);
     }
 }
