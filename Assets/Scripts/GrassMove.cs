@@ -17,7 +17,7 @@ public class GrassMove : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
         CheckGrass();
 		if (transform.position.x < 3.5f)
         {
@@ -27,6 +27,7 @@ public class GrassMove : MonoBehaviour {
         {
             slider.SetActive(true);
             anim.SetBool("loweringhead", true);
+            
         }
 	}
 

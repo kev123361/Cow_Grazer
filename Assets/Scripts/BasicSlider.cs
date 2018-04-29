@@ -28,6 +28,7 @@ public class BasicSlider : MonoBehaviour {
 	void Start () {
         slider = this.GetComponent<Slider>();
         anim = cow.GetComponent<Animator>();
+        
 	}
 
     // Update is called once per frame

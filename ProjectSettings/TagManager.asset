@@ -51,6 +51,9 @@ TagManager:
   - name: Cow
     uniqueID: 186899341
     locked: 0
+  - name: FrontCow
+    uniqueID: 1059048691
+    locked: 0
   - name: Projectiles
     uniqueID: 4182053941
     locked: 0
