@@ -31,9 +31,9 @@ public class GameController : MonoBehaviour {
         CheckUpgradeLevel();
 	}
 
-	public void increaseMoney() {
+	public int increaseMoney() {
 		money += addMoney;
-
+        return addMoney;
 	}
 
 	public void increaseSkyMoney(int amount) {

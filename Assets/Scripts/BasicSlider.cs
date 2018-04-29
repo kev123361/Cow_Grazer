@@ -9,6 +9,8 @@ public class BasicSlider : MonoBehaviour {
     private Slider slider;
     public GameObject grass;
     public Canvas canvas;
+    public GameObject cow;
+    public GameObject addMoneyText;
 
     public GameObject marveloustext;
     public GameObject goodtext;
@@ -19,9 +21,11 @@ public class BasicSlider : MonoBehaviour {
     private float t;
     private bool alternate;
     private float hiddenEatProgress = 0f;
+    private Animator anim;
 	// Use this for initialization
 	void Start () {
         slider = this.GetComponent<Slider>();
+        anim = cow.GetComponent<Animator>();
 	}
 
     // Update is called once per frame
@@ -177,10 +181,15 @@ public class BasicSlider : MonoBehaviour {
 
     public void GrassEaten()
     {
+        grass.transform.position = new Vector2(Random.Range(-10f, -15f), grass.transform.position.y);
+        anim.SetTrigger("raisehead");
+        anim.SetBool("loweringhead", false);
         slider.value = 0f;
         hiddenEatProgress = 0f;
-        grass.transform.position = new Vector2(-13f, grass.transform.position.y);
+        
         gameObject.SetActive(false);
-        gc.increaseMoney();
+        int moneyAmount = gc.increaseMoney();
+        GameObject moneyText = Instantiate(addMoneyText, canvas.transform);
+        moneyText.GetComponent<Text>().text = "$" + moneyAmount;
     }
 }
