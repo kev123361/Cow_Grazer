@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 	public Text totalMoney;
+    public GameObject udders;
+    public GameObject frontlegs;
+    public GameObject backlegs;
+    public GameObject cow;
 
     public int money;
 	public int addMoney = 30;
@@ -35,6 +39,7 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		totalMoney.text = "Money: $" + money.ToString();
         CheckUpgradeLevel();
+        CheckUpgrades();
 	}
 
 	public int increaseMoney() {
@@ -51,6 +56,20 @@ public class GameController : MonoBehaviour {
         if ((eatingRate + hormones + equipment + field + spots) / 5 > totalUpgradeLevel)
         {
             totalUpgradeLevel += 1;
+        }
+    }
+
+    private void CheckUpgrades()
+    {
+        if (hormones == 1)
+        {
+            udders.GetComponent<Animator>().SetLayerWeight(1, 1);
+        }
+        if (hormones == 2)
+        {
+            backlegs.GetComponent<Animator>().SetLayerWeight(1, 1);
+            frontlegs.GetComponent<Animator>().SetLayerWeight(1, 1);
+            cow.transform.position = new Vector3(cow.transform.position.x, -2.5f, cow.transform.position.z);
         }
     }
 

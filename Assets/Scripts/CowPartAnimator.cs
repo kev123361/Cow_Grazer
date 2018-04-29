@@ -21,6 +21,7 @@ public class CowPartAnimator : MonoBehaviour {
         {
             if (cowAnim.GetCurrentAnimatorStateInfo(0).IsName("Walking"))
             {
+                
                 anim.PassState("Walking");
             } else if (cowAnim.GetCurrentAnimatorStateInfo(0).IsName("Head Lowering"))
             {
