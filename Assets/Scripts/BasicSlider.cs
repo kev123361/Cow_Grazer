@@ -181,7 +181,7 @@ public class BasicSlider : MonoBehaviour {
 
     public void GrassEaten()
     {
-        grass.transform.position = new Vector2(-13f, grass.transform.position.y);
+        grass.transform.position = new Vector2(Random.Range(-10f, -15f), grass.transform.position.y);
         anim.SetTrigger("raisehead");
         anim.SetBool("loweringhead", false);
         slider.value = 0f;
