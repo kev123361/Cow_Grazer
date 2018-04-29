@@ -10,12 +10,12 @@ public class SkyEventController : MonoBehaviour {
 
 	public GameController gc;
 
-	public Sprite bird;
-	public Sprite plane;
-	public Sprite duckHunt;
-	public Sprite ufo;
-	public Sprite extra;
-	public Sprite[] skyObjects;
+	public GameObject bird;
+	public GameObject plane;
+	public GameObject duckHunt;
+	public GameObject ufo;
+	public GameObject bird2;
+	public GameObject tmp;
 
 	public Vector2 spawnPosition;
 	public GameObject flyingObject;
@@ -28,9 +28,6 @@ public class SkyEventController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		resetTimer = true;
-		skyObjects = new Sprite[] {
-			bird, plane, duckHunt, ufo, extra
-		};
 	}
 	
 	// Update is called once per frame
@@ -42,7 +39,7 @@ public class SkyEventController : MonoBehaviour {
 		}
 		timer += Time.deltaTime;
 		if (timer > timeToSpawn) {
-			spawnObject (pickObject ());
+			spawnObject ();
 			resetTimer = true;
 		}
 
@@ -59,24 +56,25 @@ public class SkyEventController : MonoBehaviour {
 		return pos;
 	}
 
-	int pickObject() {
+	void pickObject() {
+		
 		float sprite = Random.Range (0.0f, 1.0f);
 		if (sprite <= .35f) {
-			return 0; //Bird1
+			tmp = bird;
 		} else if (sprite <= .70f) {
-			return 4; //Bird2
+			tmp = bird2;
 		} else if (sprite <= .90f) {
-			return 1; //Plane
+			tmp = plane;
 		} else if (sprite <= .95f) {
-			return 2; //DuckHunt
+			tmp = duckHunt;
 		} else {
-			return 3; //UFO
+			tmp = ufo;
 		}
 	}
 
-    void spawnObject(int sprite)
+    void spawnObject()
     {
-        flyingObject.GetComponent<SpriteRenderer> ().sprite = skyObjects[sprite];
-        Instantiate(flyingObject, calculatePos(), flyingObject.transform.rotation);
+		pickObject ();
+		GameObject temp = Instantiate(tmp, calculatePos(), flyingObject.transform.rotation);
     }
 }
