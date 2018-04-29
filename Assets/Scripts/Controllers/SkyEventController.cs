@@ -76,6 +76,6 @@ public class SkyEventController : MonoBehaviour {
 		
 	void spawnObject(int sprite) {
 		flyingObject.GetComponent<SpriteRenderer> ().sprite = skyObjects [sprite];
-		Instantiate (flyingObject, calculatePos(), flyingObject.transform.rotation);
-
+		Instantiate (flyingObject, calculatePos (), flyingObject.transform.rotation);
+	}
 }
