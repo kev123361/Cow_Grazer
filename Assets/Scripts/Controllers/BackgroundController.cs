@@ -12,7 +12,7 @@ public class BackgroundController : MonoBehaviour {
 	public GameObject cow;
 
 	public GameObject testing;
-
+	
 	public GameObject toSpawn;
 
 	private float speed;
@@ -20,6 +20,7 @@ public class BackgroundController : MonoBehaviour {
 	public float width;
 	private Animator cowAnim;
 	private bool forground;
+	private float scale;
 
 	// Use this for initialization
 	void Start () {
@@ -53,9 +54,11 @@ public class BackgroundController : MonoBehaviour {
 	Vector2 calculatePos() {
 		forground = false;
 		float xPos = -15.0f;
-		float yPos = -3.3f;
+		float yPos = 0.3f;
+		scale = Random.Range (0.5f, 0.75f);
 		if (Random.Range (0.0f, 1.0f) <= .5) {
-			yPos = -4.3f;
+			scale = Random.Range (0.75f, 1.0f);
+			yPos = -2.5f;
 			forground = true;
 		}
 		Vector2 pos = new Vector2 (xPos, yPos);
@@ -73,8 +76,9 @@ public class BackgroundController : MonoBehaviour {
 		temp.GetComponent<backgroundObjectMover> ().gc = this.gc;
 		temp.GetComponent<backgroundObjectMover> ().cow = this.cow;
 		if (forground) {
-			temp.GetComponent<SpriteRenderer> ().sortingLayerName = "Forground";
-			//temp.GetComponent<SpriteRenderer> ().sortingOrder = 3;
+			temp.GetComponent<SpriteRenderer> ().sortingLayerName = "Grass";
+			temp.GetComponent<SpriteRenderer> ().sortingOrder = 6;
 		}
+		//temp.GetComponent<Transform>
 	}
 }
