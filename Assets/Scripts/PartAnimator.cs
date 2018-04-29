@@ -16,7 +16,7 @@ public class PartAnimator : MonoBehaviour {
 
     public void PassState(string state)
     {
-        Debug.Log(state);
+        //Debug.Log(state);
         if (state == "Walking" )
         {
             anim.ResetTrigger("headraise");

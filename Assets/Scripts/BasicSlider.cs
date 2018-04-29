@@ -17,6 +17,7 @@ public class BasicSlider : MonoBehaviour {
     public GameObject bootext;
     public GameObject greattext;
     public GameObject perfecttext;
+    public GameObject hitmarker;
 
     private float t;
     private bool alternate;
@@ -64,6 +65,7 @@ public class BasicSlider : MonoBehaviour {
                 break;
             case (2):
                 xkey.SetActive(true);
+                hitmarker.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.X))
                 {
                     if (slider.value > .35f && slider.value < .65f)
@@ -193,6 +195,7 @@ public class BasicSlider : MonoBehaviour {
     {
         xkey.SetActive(false);
         zkey.SetActive(false);
+        hitmarker.SetActive(false);
         grass.transform.position = new Vector2(Random.Range(-10f, -15f), grass.transform.position.y);
         anim.SetTrigger("raisehead");
         anim.SetBool("loweringhead", false);
