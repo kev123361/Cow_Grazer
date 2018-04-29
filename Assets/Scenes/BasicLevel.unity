@@ -232,12 +232,12 @@ MonoBehaviour:
   timer: 0
   timeToSpawn: 1
   gc: {fileID: 1183227538}
-  bird: {fileID: 21300000, guid: 91b20049087f74cc3b51d99a4766ee82, type: 3}
-  plane: {fileID: 21300000, guid: 4fa0aec360f12424396ab841c2814727, type: 3}
-  duckHunt: {fileID: 21300000, guid: 6d929531c9801470386be9468a421e00, type: 3}
-  ufo: {fileID: 21300000, guid: efc9bccc7d38c45c48f01d9cd6982b8b, type: 3}
-  extra: {fileID: 21300000, guid: cbaa64caedd17da4d8e24b398dc4ae00, type: 3}
-  skyObjects: []
+  bird: {fileID: 1895229194520872, guid: 79385df6ce1d549698b0f91618e98932, type: 2}
+  plane: {fileID: 1012917051378924, guid: 2d8c0e030b0de4733864666454364991, type: 2}
+  duckHunt: {fileID: 1111779056263566, guid: ae71cf663e24d414189572eb4f75129e, type: 2}
+  ufo: {fileID: 1452566088346066, guid: 68f86d41e7e1d403cbd79dad234a4add, type: 2}
+  bird2: {fileID: 1012917051378924, guid: 2d8c0e030b0de4733864666454364991, type: 2}
+  tmp: {fileID: 0}
   spawnPosition: {x: 0, y: 0}
   flyingObject: {fileID: 1426152376498242, guid: 0ee573a2a904b47d991055e2805ff676,
     type: 2}
@@ -884,6 +884,8 @@ MonoBehaviour:
   greattext: {fileID: 1802370034808942, guid: 6bdc4997da6d96f41b9d42e6ebae010c, type: 2}
   perfecttext: {fileID: 1448828208307586, guid: 17d96af66f2e2234398c67502382a29e,
     type: 2}
+  xkey: {fileID: 0}
+  zkey: {fileID: 0}
 --- !u!114 &988130281
 MonoBehaviour:
   m_ObjectHideFlags: 0

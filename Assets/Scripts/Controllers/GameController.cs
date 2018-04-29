@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 	public Text totalMoney;
@@ -23,7 +24,12 @@ public class GameController : MonoBehaviour {
 	void Start () {
         LoadPrefs();
 		totalMoney.text = "Money: $" + money.ToString();
-	}
+        if (SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            //Debug.Log(SceneManager.GetActiveScene().name);
+            GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().PlayMusic();
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {

@@ -22,6 +22,8 @@ public class BasicSlider : MonoBehaviour {
     private bool alternate;
     private float hiddenEatProgress = 0f;
     private Animator anim;
+    public GameObject xkey;
+    public GameObject zkey;
 	// Use this for initialization
 	void Start () {
         slider = this.GetComponent<Slider>();
@@ -32,6 +34,7 @@ public class BasicSlider : MonoBehaviour {
     void Update() {
         switch (gc.eatingRate) {
             case (0):
+                xkey.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.X))
                 {
                     slider.value += .05f;
@@ -42,6 +45,8 @@ public class BasicSlider : MonoBehaviour {
                 }
                 break;
             case (1):
+                xkey.SetActive(true);
+                zkey.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.X) && alternate)
                 {
                     slider.value += .1f;
@@ -57,6 +62,7 @@ public class BasicSlider : MonoBehaviour {
                 }
                 break;
             case (2):
+                xkey.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.X))
                 {
                     if (slider.value > .35f && slider.value < .65f)
@@ -71,7 +77,7 @@ public class BasicSlider : MonoBehaviour {
                     }
                     else
                     {
-                        hiddenEatProgress += .5f;
+                        hiddenEatProgress += .05f;
                         Instantiate(bootext, canvas.transform);
                     }
 
@@ -103,6 +109,7 @@ public class BasicSlider : MonoBehaviour {
                 t += Time.deltaTime * .6f;
                 break;
             case (3):
+                xkey.SetActive(true);
                 if (Input.GetKey(KeyCode.X))
                 {
                     slider.value = Mathf.Lerp(slider.value, slider.value + .5f, Time.deltaTime);
@@ -129,6 +136,7 @@ public class BasicSlider : MonoBehaviour {
                 }
                 break;
             case (4):
+                xkey.SetActive(true);
                 if (Input.GetKey(KeyCode.X))
                 {
                     slider.value = Mathf.Lerp(slider.value, slider.value + 1.2f, Time.deltaTime);
@@ -155,6 +163,7 @@ public class BasicSlider : MonoBehaviour {
                 }
                 break;
             case (5):
+                xkey.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.X))
                 {
                     int rand = Random.Range(1, 5);
@@ -181,6 +190,8 @@ public class BasicSlider : MonoBehaviour {
 
     public void GrassEaten()
     {
+        xkey.SetActive(false);
+        zkey.SetActive(false);
         grass.transform.position = new Vector2(Random.Range(-10f, -15f), grass.transform.position.y);
         anim.SetTrigger("raisehead");
         anim.SetBool("loweringhead", false);

@@ -14,7 +14,7 @@ public class AddMoney : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.position = Vector3.Lerp(transform.position,
-            new Vector3(transform.position.x, transform.position.y + 10f, transform.position.z), Time.deltaTime);
+            new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Time.deltaTime);
         Color textColor = text.color;
         textColor.a -= 1f * Time.deltaTime;
         text.color = textColor;
