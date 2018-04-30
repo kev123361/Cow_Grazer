@@ -29,6 +29,7 @@ public class destroyOnContact : MonoBehaviour {
 		other.gameObject.GetComponent<Transform> ().rotation = r;
 		if (other.gameObject.name == "UFO(Clone)") {
 			other.gameObject.GetComponent<AudioSource> ().enabled = false;
+			other.gameObject.GetComponent<AudioSource> ().enabled = false;
 			other.gameObject.GetComponent<AudioSource> ().clip = gc.UFOAudio;
 			//other.gameObject.GetComponent<AudioSource> ().enabled = true;
 		}

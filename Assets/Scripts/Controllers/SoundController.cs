@@ -16,6 +16,8 @@ public class SoundController : MonoBehaviour {
 	public AudioClip chomp;
 	public AudioClip UFOAudio;
 
+	public string currentSoundToPlay;
+
 	public AudioClip d;
 
 	public bool chewing;
@@ -27,6 +29,32 @@ public class SoundController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (cowAnim.GetCurrentAnimatorStateInfo (0).IsName ("Eating")) {
+			if (!chewing) {
+				currentSoundToPlay = "chomp";
+				chewing = true;
+			} else {
+				if (gc.eatingRate <= 2) {
+					currentSoundToPlay = "chew";
+				} else if (gc.eatingRate < 4) {
+					currentSoundToPlay = "slurp";
+				} else {
+					currentSoundToPlay = "bigSuck";
+				}
+			}
+		} else {
+			currentSoundToPlay = "noSound";
+			chewing = false;
+		}
+
+		foreach (Transform child in transform) {
+			if (child.gameObject.name == currentSoundToPlay) {
+				child.gameObject.SetActive (true);
+			} else {
+				child.gameObject.SetActive (false);
+			}
+		}
+	}
 		/*if (cowAnim.GetCurrentAnimatorStateInfo (0).IsName ("Eating")) {
 			if (!chewing) {
 				GetComponent<AudioSource> ().clip = chomp;
@@ -40,6 +68,6 @@ public class SoundController : MonoBehaviour {
 		}
 		d = GetComponent<AudioSource> ().clip;
 		//StartCoroutine(doSound ());*/
-	}
+	//}
 
 }

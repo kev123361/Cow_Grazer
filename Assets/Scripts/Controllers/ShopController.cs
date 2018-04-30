@@ -114,4 +114,8 @@ public class ShopController : MonoBehaviour {
             }
         }
     }
+
+	void activateSound() {
+
+	}
 }
