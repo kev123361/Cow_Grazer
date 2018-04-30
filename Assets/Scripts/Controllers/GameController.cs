@@ -108,6 +108,12 @@ public class GameController : MonoBehaviour {
             if (eatingRate == 2)
             {
                 head.GetComponent<Animator>().SetLayerWeight(1, 1);
+            } else if (eatingRate == 3)
+            {
+                head.GetComponent<Animator>().SetLayerWeight(2, 1);
+            } else if (eatingRate == 4)
+            {
+                head.GetComponent<Animator>().SetLayerWeight(3, 1);
             }
         }
     }
