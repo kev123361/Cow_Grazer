@@ -12,7 +12,8 @@ public class BackgroundController : MonoBehaviour {
 	public GameObject cow;
 
 	public GameObject testing;
-	
+	public GameObject asteriod;
+
 	public GameObject toSpawn;
 
 	private float speed;
@@ -68,6 +69,9 @@ public class BackgroundController : MonoBehaviour {
 	void pickObject() {
 		float sprite = Random.Range (0.0f, 1.0f);
 		toSpawn = testing;
+		if (gc.totalUpgradeLevel >= 4) {
+			toSpawn = asteriod;
+		}
 	}
 
 	void spawnObject() {

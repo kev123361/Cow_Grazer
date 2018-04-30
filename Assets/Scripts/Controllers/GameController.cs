@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
+
+	public AudioClip UFOAudio;
+
 	public Text totalMoney;
     public GameObject udders;
     public GameObject frontlegs;

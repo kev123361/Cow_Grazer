@@ -55,16 +55,19 @@ public class SkyEventController : MonoBehaviour {
 	}
 
 	void pickObject() {
-		
-		float sprite = Random.Range (0.0f, 1.0f);
-		if (sprite <= .35f) {
-			tmp = bird;
-		} else if (sprite <= .70f) {
-			tmp = bird2;
-		} else if (sprite <= .90f) {
-			tmp = plane;
-		} else if (sprite <= .95f) {
-			tmp = duckHunt;
+		if (gc.totalUpgradeLevel < 4) {
+			float sprite = Random.Range (0.0f, 1.0f);
+			if (sprite <= .35f) {
+				tmp = bird;
+			} else if (sprite <= .70f) {
+				tmp = bird2;
+			} else if (sprite <= .90f) {
+				tmp = plane;
+			} else if (sprite <= .95f) {
+				tmp = duckHunt;
+			} else {
+				tmp = ufo;
+			}
 		} else {
 			tmp = ufo;
 		}
