@@ -10,8 +10,11 @@ public class GameController : MonoBehaviour {
     public GameObject frontlegs;
     public GameObject backlegs;
     public GameObject cow;
+    public GameObject body;
 
     public GameObject[] backgrounds;
+    public GameObject secondhead;
+    public GameObject secondneck;
 
     public int money;
 	public int addMoney = 30;
@@ -68,11 +71,16 @@ public class GameController : MonoBehaviour {
             {
                 udders.GetComponent<Animator>().SetLayerWeight(1, 1);
             }
-            if (hormones == 2)
+             else if (hormones == 2)
             {
                 backlegs.GetComponent<Animator>().SetLayerWeight(1, 1);
                 frontlegs.GetComponent<Animator>().SetLayerWeight(1, 1);
                 cow.transform.position = new Vector3(cow.transform.position.x, -2.5f, cow.transform.position.z);
+            }
+            else if (hormones == 3)
+            {
+                secondhead.SetActive(true);
+                secondneck.SetActive(true);
             }
             if (equipment == 3)
             {
@@ -83,6 +91,13 @@ public class GameController : MonoBehaviour {
             {
                 backgrounds[0].SetActive(false);
                 backgrounds[1].SetActive(true);
+            }
+            if (spots == 1)
+            {
+                body.GetComponent<Animator>().SetLayerWeight(1, 1);
+            } else if (spots == 2)
+            {
+                body.GetComponent<Animator>().SetLayerWeight(2, 1);
             }
         }
     }
