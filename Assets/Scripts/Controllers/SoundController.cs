@@ -12,7 +12,12 @@ public class SoundController : MonoBehaviour {
 	public GameObject cow;
 	private Animator cowAnim;
 
-	public bool chew;
+	public AudioClip chew;
+	public AudioClip chomp;
+
+	public AudioClip d;
+
+	public bool chewing;
 
 	// Use this for initialization
 	void Start () {
@@ -22,14 +27,18 @@ public class SoundController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (cowAnim.GetCurrentAnimatorStateInfo (0).IsName ("Eating")) {
-			if (!chew) {
-				GetComponent<AudioSource> ().enabled = true;
-				chew = true;
+			if (!chewing) {
+				GetComponent<AudioSource> ().clip = chomp;
+				chewing = true;
 			} else {
-				GetComponent<AudioSource> ().enabled = true;
+				GetComponent<AudioSource> ().clip = chew;
 			}
 		} else {
-			GetComponent<AudioSource> ().enabled = false;
+			GetComponent<AudioSource> ().clip = null;
+			chewing = false;
 		}
+		d = GetComponent<AudioSource> ().clip;
+		StartCoroutine(doSound ());
 	}
+
 }
