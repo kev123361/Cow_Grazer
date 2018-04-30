@@ -50,6 +50,9 @@ TagManager:
   - name: CowBack
     uniqueID: 779505235
     locked: 0
+  - name: Udders
+    uniqueID: 3970404643
+    locked: 0
   - name: CowMiddle
     uniqueID: 4292378361
     locked: 0
