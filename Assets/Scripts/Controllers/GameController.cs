@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour {
     public GameObject cow;
     public GameObject body;
     public GameObject head;
+    public GameObject holyhead;
 
     public GameObject[] backgrounds;
     public GameObject secondhead;
@@ -46,6 +47,10 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            money = 50000;
+        }
 		totalMoney.text = "Money: $" + money.ToString();
         CheckUpgradeLevel();
         CheckUpgrades();
@@ -85,6 +90,10 @@ public class GameController : MonoBehaviour {
             {
                 secondhead.SetActive(true);
                 secondneck.SetActive(true);
+            } else if (hormones == 4)
+            {
+                secondhead.SetActive(false);
+                holyhead.SetActive(true);
             }
             if (equipment == 3)
             {

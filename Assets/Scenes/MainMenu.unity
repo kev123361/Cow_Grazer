@@ -411,11 +411,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d00faa8adc0bc48b4404f64f5658f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UFOAudio: {fileID: 0}
   totalMoney: {fileID: 812538945}
   udders: {fileID: 863641211}
   frontlegs: {fileID: 863641211}
   backlegs: {fileID: 863641211}
   cow: {fileID: 863641211}
+  body: {fileID: 0}
+  head: {fileID: 0}
+  holyhead: {fileID: 0}
+  backgrounds: []
+  secondhead: {fileID: 0}
+  secondneck: {fileID: 0}
   money: 0
   addMoney: 0
   frequency: 0
@@ -584,6 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: effaf88ba1c574e058b0709d5e4e5827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gc: {fileID: 978317902}
 --- !u!1 &1445875779
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +637,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7f15e91b7b3fcc94d8ae13b914224422, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5f21103496f504745a368a2533afbbfd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -485,6 +485,34 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 299559308}
+--- !u!1 &331666002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 331666003}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &331666003
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 331666002}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.78324103, y: -0.5778461, z: 0.06575838}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &493622396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,7 +1139,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d00faa8adc0bc48b4404f64f5658f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UFOAudio: {fileID: 8300000, guid: f3b95628477bc403284f3b4e02501cc7, type: 3}
   totalMoney: {fileID: 270042085}
+  udders: {fileID: 331666002}
+  frontlegs: {fileID: 331666002}
+  backlegs: {fileID: 331666002}
+  cow: {fileID: 331666002}
+  body: {fileID: 331666002}
+  head: {fileID: 331666002}
+  holyhead: {fileID: 331666002}
+  backgrounds: []
+  secondhead: {fileID: 331666002}
+  secondneck: {fileID: 331666002}
   money: 0
   addMoney: 0
   frequency: 0
@@ -2076,6 +2115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: effaf88ba1c574e058b0709d5e4e5827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gc: {fileID: 835787070}
 --- !u!114 &2022464130
 MonoBehaviour:
   m_ObjectHideFlags: 0
