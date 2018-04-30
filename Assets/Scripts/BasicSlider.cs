@@ -18,6 +18,7 @@ public class BasicSlider : MonoBehaviour {
     public GameObject greattext;
     public GameObject perfecttext;
     public GameObject hitmarker;
+    public GameObject holdtext;
 
     private float t;
     private bool alternate;
@@ -114,6 +115,7 @@ public class BasicSlider : MonoBehaviour {
                 break;
             case (3):
                 xkey.SetActive(true);
+                holdtext.SetActive(true);
                 if (Input.GetKey(KeyCode.X))
                 {
                     slider.value = Mathf.Lerp(slider.value, slider.value + .5f, Time.deltaTime);
@@ -141,6 +143,7 @@ public class BasicSlider : MonoBehaviour {
                 break;
             case (4):
                 xkey.SetActive(true);
+                holdtext.SetActive(true);
                 if (Input.GetKey(KeyCode.X))
                 {
                     slider.value = Mathf.Lerp(slider.value, slider.value + 1.2f, Time.deltaTime);
@@ -197,6 +200,7 @@ public class BasicSlider : MonoBehaviour {
         xkey.SetActive(false);
         zkey.SetActive(false);
         hitmarker.SetActive(false);
+        holdtext.SetActive(false);
         grass.transform.position = new Vector2(Random.Range(-10f, -15f), grass.transform.position.y);
         anim.SetTrigger("raisehead");
         anim.SetBool("loweringhead", false);

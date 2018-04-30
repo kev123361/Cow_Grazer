@@ -10,7 +10,7 @@ public class GrassMove : MonoBehaviour {
     public GameObject slider;
 	public float eatProgress;
     private Animator anim;
-    private string[] grassTypes = { "Grass", "TallGrass", "Bush", "Tree" };
+    private string[] grassTypes = { "Grass", "TallGrass", "Bush", "Tree", "Tree", "Jupiter" };
 	private string[] grassEaten = { "notEaten", "Eaten" };
 	// Use this for initialization
 	void Start () {
@@ -38,7 +38,20 @@ public class GrassMove : MonoBehaviour {
         
         foreach (Transform child in transform)
         {
-            if (child.gameObject.name == grassTypes[gc.field])
+            if (gc.totalUpgradeLevel >= 4)
+            {
+                if (child.gameObject.name == grassTypes[5])
+                {
+
+                    child.gameObject.SetActive(true);
+                    updateEatenSprite(child.gameObject);
+                }
+                else
+                {
+                    child.gameObject.SetActive(false);
+                }
+            }
+            else if (child.gameObject.name == grassTypes[gc.field])
             {
                 
                 child.gameObject.SetActive(true);
