@@ -26,6 +26,7 @@ public class destroyOnContact : MonoBehaviour {
 		float angle = -90;
 		Quaternion r = Quaternion.AngleAxis(angle, Vector3.forward);
 		other.gameObject.GetComponent<Transform> ().rotation = r;
+		other.gameObject.GetComponent<AudioSource> ().enabled = true;
 
 		GameObject moneyText = Instantiate(addMoneyText, canvas.transform);
 		moneyText.GetComponent<Text>().text = "$" + moneyAmount;
