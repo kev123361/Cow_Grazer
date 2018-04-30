@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BasicSlider : MonoBehaviour {
 	public GameController gc;
 
-    private Slider slider;
+	public Slider slider;
     public GameObject grass;
     public Canvas canvas;
     public GameObject cow;
@@ -21,7 +21,8 @@ public class BasicSlider : MonoBehaviour {
 
     private float t;
     private bool alternate;
-    private float hiddenEatProgress = 0f;
+	public float hiddenEatProgress = 0f;
+	public float eatProgress;
     private Animator anim;
     public GameObject xkey;
     public GameObject zkey;

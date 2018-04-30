@@ -1,19 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class destroyOnContact : MonoBehaviour {
 
 	public GameController gc;
+	public Canvas canvas;
 	public GameObject tmp;
+	public GameObject addMoneyText;
 	// Use this for initialization
 	void Start () {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		Debug.Log (other.gameObject);
+		int moneyAmount = 0;
 		if (other.tag == "skyObject") {
-			gc.increaseSkyMoney (checkPrice(other.gameObject));
+			moneyAmount = checkPrice (other.gameObject);
+			gc.increaseSkyMoney (moneyAmount);
 		}
 		other.gameObject.GetComponent<skyMover> ().enabled = false;
 		other.gameObject.GetComponent<destroyByTime> ().lifeTime = 1.0f;
@@ -21,6 +26,9 @@ public class destroyOnContact : MonoBehaviour {
 		float angle = -90;
 		Quaternion r = Quaternion.AngleAxis(angle, Vector3.forward);
 		other.gameObject.GetComponent<Transform> ().rotation = r;
+
+		GameObject moneyText = Instantiate(addMoneyText, canvas.transform);
+		moneyText.GetComponent<Text>().text = "$" + moneyAmount;
 		//Destroy (other.gameObject);
 	}
 

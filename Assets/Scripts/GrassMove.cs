@@ -53,6 +53,9 @@ public class GrassMove : MonoBehaviour {
 
 	void updateEatenSprite(GameObject g) {
 		eatProgress = slider.GetComponent<Slider> ().value;
+		if (gc.eatingRate == 2) {
+			eatProgress = slider.GetComponent<BasicSlider> ().hiddenEatProgress;
+		}
 		foreach (Transform child in g.transform) {
 			if (eatProgress > 0.5f) {
 				if (child.gameObject.name == "Eaten") {
