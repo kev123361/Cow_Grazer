@@ -2875,6 +2875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: effaf88ba1c574e058b0709d5e4e5827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gc: {fileID: 1183227538}
 --- !u!1 &1443773014
 GameObject:
   m_ObjectHideFlags: 0
@@ -3568,6 +3569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 1183227538}
+  sc: {fileID: 0}
   addMoneyText: {fileID: 1905787552019128, guid: 1924076087aa80344bdfa3bce0958185,
     type: 2}
   canvas: {fileID: 559322920}

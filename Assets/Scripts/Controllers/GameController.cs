@@ -47,6 +47,10 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            money = 50000;
+        }
 		totalMoney.text = "Money: $" + money.ToString();
         CheckUpgradeLevel();
         CheckUpgrades();
