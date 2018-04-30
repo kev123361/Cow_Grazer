@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour {
     public GameObject backlegs;
     public GameObject cow;
     public GameObject body;
+    public GameObject head;
 
     public GameObject[] backgrounds;
     public GameObject secondhead;
@@ -91,6 +92,11 @@ public class GameController : MonoBehaviour {
             {
                 backgrounds[0].SetActive(false);
                 backgrounds[1].SetActive(true);
+            } else if (totalUpgradeLevel == 4)
+            {
+                backgrounds[0].SetActive(false);
+                backgrounds[1].SetActive(false);
+                backgrounds[2].SetActive(true);
             }
             if (spots == 1)
             {
@@ -98,6 +104,10 @@ public class GameController : MonoBehaviour {
             } else if (spots == 2)
             {
                 body.GetComponent<Animator>().SetLayerWeight(2, 1);
+            }
+            if (eatingRate == 2)
+            {
+                head.GetComponent<Animator>().SetLayerWeight(1, 1);
             }
         }
     }
