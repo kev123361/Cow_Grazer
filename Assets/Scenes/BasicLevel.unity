@@ -1264,6 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 1183227538}
+  slider: {fileID: 0}
   grass: {fileID: 1146735884}
   canvas: {fileID: 559322920}
   cow: {fileID: 1505864976}
@@ -1277,6 +1278,8 @@ MonoBehaviour:
   perfecttext: {fileID: 1448828208307586, guid: 17d96af66f2e2234398c67502382a29e,
     type: 2}
   hitmarker: {fileID: 1058257846}
+  hiddenEatProgress: 0
+  eatProgress: 0
   xkey: {fileID: 1443773014}
   zkey: {fileID: 804766283}
 --- !u!114 &988130281
@@ -3160,6 +3163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 1183227538}
+  addMoneyText: {fileID: 1905787552019128, guid: 1924076087aa80344bdfa3bce0958185,
+    type: 2}
+  canvas: {fileID: 559322920}
   fireTimer: 0
   fireTime: 0.25
   fb: {fileID: 1399578621969570, guid: dabf49555a4594ced8733ab31b435909, type: 2}

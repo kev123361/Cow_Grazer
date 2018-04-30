@@ -5,6 +5,8 @@ using UnityEngine;
 public class HeadTrack : MonoBehaviour {
 
 	public GameController gc;
+	public GameObject addMoneyText;
+	public Canvas canvas;
 
 	public float fireTimer;
 	public float fireTime;
@@ -27,6 +29,8 @@ public class HeadTrack : MonoBehaviour {
 	void Start () {
 		lazerMain = Instantiate (lazerMain, head.position, head.rotation);
 		lazerMain.GetComponent<destroyOnContact> ().gc = this.gc;
+		lazerMain.GetComponent<destroyOnContact> ().addMoneyText = this.addMoneyText;
+		lazerMain.GetComponent<destroyOnContact> ().canvas = this.canvas;
 		lazerMain.SetActive (false);
 	}
 
@@ -36,6 +40,8 @@ public class HeadTrack : MonoBehaviour {
 		Quaternion r = Quaternion.AngleAxis(angle, Vector3.forward);
 		GameObject tmp = Instantiate (fb, head.position, r);
 		tmp.GetComponent<destroyOnContact> ().gc = this.gc;
+		tmp.GetComponent<destroyOnContact> ().addMoneyText = this.addMoneyText;
+		tmp.GetComponent<destroyOnContact> ().canvas = this.canvas;
 	}
 
 	// Update is called once per frame
@@ -104,6 +110,8 @@ public class HeadTrack : MonoBehaviour {
 		Quaternion r = Quaternion.AngleAxis(angle, Vector3.forward);
 		GameObject tmp = Instantiate (lazer2, head.position, r);
 		tmp.GetComponent<destroyOnContact> ().gc = this.gc;
+		tmp.GetComponent<destroyOnContact> ().addMoneyText = this.addMoneyText;
+		tmp.GetComponent<destroyOnContact> ().canvas = this.canvas;
 		isCharging = false;
 	}
 
