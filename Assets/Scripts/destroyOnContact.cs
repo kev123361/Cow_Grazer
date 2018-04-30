@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class destroyOnContact : MonoBehaviour {
 
 	public GameController gc;
+	public GameObject sc;
 	public Canvas canvas;
 	public GameObject tmp;
 	public GameObject addMoneyText;
@@ -26,6 +27,11 @@ public class destroyOnContact : MonoBehaviour {
 		float angle = -90;
 		Quaternion r = Quaternion.AngleAxis(angle, Vector3.forward);
 		other.gameObject.GetComponent<Transform> ().rotation = r;
+		if (other.gameObject.name == "UFO(Clone)") {
+			other.gameObject.GetComponent<AudioSource> ().enabled = false;
+			other.gameObject.GetComponent<AudioSource> ().clip = gc.UFOAudio;
+			//other.gameObject.GetComponent<AudioSource> ().enabled = true;
+		}
 		other.gameObject.GetComponent<AudioSource> ().enabled = true;
 
 		GameObject moneyText = Instantiate(addMoneyText, canvas.transform);

@@ -1175,6 +1175,7 @@ MonoBehaviour:
   gc: {fileID: 1183227538}
   cow: {fileID: 1505864976}
   testing: {fileID: 1902704009700354, guid: 202950f74d0b242fda1dd306ca93e270, type: 2}
+  asteriod: {fileID: 1796353426006600, guid: 17fafa3ff938d44eb95f250903b0ef5a, type: 2}
   toSpawn: {fileID: 0}
   width: 0
 --- !u!1 &804766283
@@ -1341,7 +1342,7 @@ GameObject:
   - component: {fileID: 861243891}
   m_Layer: 0
   m_Name: SoundController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1374,8 +1375,9 @@ MonoBehaviour:
   timeToSpawn: 0
   gc: {fileID: 1183227538}
   cow: {fileID: 1505864976}
-  chew: {fileID: 0}
-  chomp: {fileID: 0}
+  chew: {fileID: 8300000, guid: 2df54d035a706452a9cc40e350168bf6, type: 3}
+  chomp: {fileID: 8300000, guid: 6212078570f004e6083e523a36c1d13e, type: 3}
+  UFOAudio: {fileID: 8300000, guid: f3b95628477bc403284f3b4e02501cc7, type: 3}
   d: {fileID: 0}
   chewing: 0
 --- !u!1 &893548688
@@ -2333,6 +2335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d00faa8adc0bc48b4404f64f5658f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UFOAudio: {fileID: 8300000, guid: d65e036d45b494e998efd9445f8a17b2, type: 3}
   totalMoney: {fileID: 1487902237}
   udders: {fileID: 1197834230}
   frontlegs: {fileID: 461996709}
@@ -3846,6 +3849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 1183227538}
+  sc: {fileID: 861243888}
   addMoneyText: {fileID: 1905787552019128, guid: 1924076087aa80344bdfa3bce0958185,
     type: 2}
   canvas: {fileID: 559322920}

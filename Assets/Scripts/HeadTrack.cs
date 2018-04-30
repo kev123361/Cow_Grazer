@@ -5,6 +5,7 @@ using UnityEngine;
 public class HeadTrack : MonoBehaviour {
 
 	public GameController gc;
+	public GameObject sc;
 	public GameObject addMoneyText;
 	public Canvas canvas;
 
@@ -31,6 +32,7 @@ public class HeadTrack : MonoBehaviour {
 		lazerMain.GetComponent<destroyOnContact> ().gc = this.gc;
 		lazerMain.GetComponent<destroyOnContact> ().addMoneyText = this.addMoneyText;
 		lazerMain.GetComponent<destroyOnContact> ().canvas = this.canvas;
+		lazerMain.GetComponent<destroyOnContact> ().sc = this.sc;
 		lazerMain.SetActive (false);
 	}
 
@@ -42,6 +44,7 @@ public class HeadTrack : MonoBehaviour {
 		tmp.GetComponent<destroyOnContact> ().gc = this.gc;
 		tmp.GetComponent<destroyOnContact> ().addMoneyText = this.addMoneyText;
 		tmp.GetComponent<destroyOnContact> ().canvas = this.canvas;
+		tmp.GetComponent<destroyOnContact> ().sc = this.sc;
 	}
 
 	// Update is called once per frame
@@ -112,6 +115,7 @@ public class HeadTrack : MonoBehaviour {
 		tmp.GetComponent<destroyOnContact> ().gc = this.gc;
 		tmp.GetComponent<destroyOnContact> ().addMoneyText = this.addMoneyText;
 		tmp.GetComponent<destroyOnContact> ().canvas = this.canvas;
+		tmp.GetComponent<destroyOnContact> ().sc = this.sc;
 		isCharging = false;
 	}
 

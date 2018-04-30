@@ -14,6 +14,7 @@ public class SoundController : MonoBehaviour {
 
 	public AudioClip chew;
 	public AudioClip chomp;
+	public AudioClip UFOAudio;
 
 	public AudioClip d;
 
