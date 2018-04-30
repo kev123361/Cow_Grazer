@@ -26,7 +26,7 @@ public class SoundController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (cowAnim.GetCurrentAnimatorStateInfo (0).IsName ("Eating")) {
+		/*if (cowAnim.GetCurrentAnimatorStateInfo (0).IsName ("Eating")) {
 			if (!chewing) {
 				GetComponent<AudioSource> ().clip = chomp;
 				chewing = true;
@@ -38,7 +38,7 @@ public class SoundController : MonoBehaviour {
 			chewing = false;
 		}
 		d = GetComponent<AudioSource> ().clip;
-		StartCoroutine(doSound ());
+		//StartCoroutine(doSound ());*/
 	}
 
 }
